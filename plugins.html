@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+
+<div class="container">
+
+
+
+    <br/>
+
+    <div class="dropdown" id="myDropdown">
+        <a class="myDropdownHandle" data-toggle="dropdown" data-target="#" href="#">
+            Dropdown <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert">&times</button>
+        Amount has been transferred successfully
+    </div>
+
+    <hr>
+
+    <button type="button" class="btn btn-lg btn-default" data-toggle="button">Toggle Me</button>
+
+</div>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        //$('.myDropDownHandle').dropdown('toggle');
+
+        $('#myDropdown').on('show.bs.dropdown', function () {
+            console.log("Opening dropdown..");
+        });
+
+        $('.alert').on('close.bs.alert', function(){
+            console.log("Closing alert");
+        });
+
+    });
+</script>
+</body>
+</html>
